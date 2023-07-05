@@ -6,8 +6,6 @@ import org.junit.jupiter.params.provider.*;
 import ru.netology.entity.Country;
 import ru.netology.entity.Location;
 
-import java.util.stream.Stream;
-
 public class GeoServiceImplTest {
 
     @ParameterizedTest
@@ -39,6 +37,6 @@ public class GeoServiceImplTest {
         GeoService geoService = new GeoServiceImpl();
         Location result = geoService.byIp(ip);
 
-        Assertions.assertEquals(null, result);
+        Assertions.assertNull(result);
     }
 }
